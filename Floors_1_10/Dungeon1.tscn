@@ -1,0 +1,74 @@
+[gd_scene load_steps=14 format=3 uid="uid://cmtwsqyrd8jee"]
+
+[ext_resource type="Script" uid="uid://3xrnhpjyaw57" path="res://Floors_1_10/dungeon_1.gd" id="1_vws1k"]
+[ext_resource type="PackedScene" uid="uid://bqjrcv8cvyxan" path="res://배경화면/배경화면.tscn" id="2_cn2n8"]
+[ext_resource type="Texture2D" uid="uid://bxm7l45rck8or" path="res://에셋/배경/스토리패널/글상자.png" id="3_27vum"]
+[ext_resource type="Script" uid="uid://declftajkg5c0" path="res://Floors_1_10/text_panel.gd" id="3_cn2n8"]
+[ext_resource type="Texture2D" uid="uid://ch8erfcf654sy" path="res://에셋/주인공/용사.PNG" id="3_qdyfk"]
+[ext_resource type="FontFile" uid="uid://cfyd7jhx885x8" path="res://에셋/폰트/DOSGothic.ttf" id="5_6gasw"]
+[ext_resource type="PackedScene" uid="uid://camv42qg1r0e7" path="res://시작화면/DungeonMenu.tscn" id="6_k51gw"]
+[ext_resource type="PackedScene" uid="uid://b5nmw6pvuwawx" path="res://시작화면/StatusMenu.tscn" id="7_7jlv2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6gasw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m2lgw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nqj20"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_evtjx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2vdna"]
+
+[node name="Dungeon1" type="Node2D"]
+script = ExtResource("1_vws1k")
+
+[node name="배경화면" parent="." instance=ExtResource("2_cn2n8")]
+
+[node name="용사" type="Sprite2D" parent="."]
+position = Vector2(269, 549)
+scale = Vector2(0.447266, 0.447266)
+texture = ExtResource("3_qdyfk")
+
+[node name="글상자" type="NinePatchRect" parent="."]
+modulate = Color(1, 1, 1, 0.6)
+offset_left = 172.0
+offset_top = 538.0
+offset_right = 1132.0
+offset_bottom = 668.0
+texture = ExtResource("3_27vum")
+
+[node name="TextPanel" type="Control" parent="글상자"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 27.0
+offset_right = 67.0
+offset_bottom = 40.0
+script = ExtResource("3_cn2n8")
+
+[node name="dialog_label" type="Label" parent="글상자/TextPanel"]
+layout_mode = 0
+offset_left = -27.0
+offset_right = 933.0
+offset_bottom = 130.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("5_6gasw")
+theme_override_font_sizes/font_size = 30
+
+[node name="next_button" type="Button" parent="글상자/TextPanel"]
+layout_mode = 0
+offset_left = -27.0
+offset_right = 933.0
+offset_bottom = 130.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6gasw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_m2lgw")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nqj20")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_evtjx")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2vdna")
+
+[node name="DungeonMenu" parent="." instance=ExtResource("6_k51gw")]
+visible = false
+
+[node name="StatusMenu" parent="." instance=ExtResource("7_7jlv2")]
+visible = false

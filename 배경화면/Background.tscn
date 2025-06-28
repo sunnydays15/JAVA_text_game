@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://74gg8nboq4lp"]
+
+[ext_resource type="Texture2D" uid="uid://b5vwvbnxx38dj" path="res://에셋/배경/던전배경/ChatGPT Image 2025년 6월 27일 오후 11_07_30.png" id="1_s8r6k"]
+[ext_resource type="Texture2D" uid="uid://dr0jf5gjd6uor" path="res://에셋/배경/던전배경/ChatGPT Image 2025년 6월 27일 오후 11_07_33.png" id="2_gvt52"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4gm5t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_s8r6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_gvt52")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="Background" type="AnimatedSprite2D"]
+position = Vector2(639.5, 359.5)
+scale = Vector2(0.832682, 0.702148)
+sprite_frames = SubResource("SpriteFrames_4gm5t")
+autoplay = "default"
+frame_progress = 0.745501

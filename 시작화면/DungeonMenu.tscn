@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://camv42qg1r0e7"]
+
+[ext_resource type="Script" uid="uid://dh4mhhgmwi2vy" path="res://시작화면/dungeon_menu.gd" id="1_gxwt3"]
+[ext_resource type="PackedScene" uid="uid://bqjrcv8cvyxan" path="res://배경화면/배경화면.tscn" id="2_6w8gu"]
+[ext_resource type="Texture2D" uid="uid://ch8erfcf654sy" path="res://에셋/주인공/용사.PNG" id="3_8eag3"]
+[ext_resource type="FontFile" uid="uid://cfyd7jhx885x8" path="res://에셋/폰트/DOSGothic.ttf" id="3_14oeu"]
+
+[node name="DungeonMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_gxwt3")
+
+[node name="배경화면" parent="." instance=ExtResource("2_6w8gu")]
+
+[node name="location_label" type="Label" parent="."]
+layout_mode = 1
+offset_right = 249.0
+offset_bottom = 31.0
+theme_override_fonts/font = ExtResource("3_14oeu")
+theme_override_font_sizes/font_size = 30
+
+[node name="menu_container" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 789.0
+offset_top = 485.0
+offset_right = 977.0
+offset_bottom = 653.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="explore_button" type="Button" parent="menu_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_14oeu")
+theme_override_font_sizes/font_size = 30
+text = "1.  탐험한다"
+
+[node name="status_button" type="Button" parent="menu_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_14oeu")
+theme_override_font_sizes/font_size = 30
+text = "2. 상태 확인"
+
+[node name="inventory_button" type="Button" parent="menu_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_14oeu")
+theme_override_font_sizes/font_size = 30
+text = "3. 인벤토리"
+
+[node name="exit_button" type="Button" parent="menu_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_14oeu")
+theme_override_font_sizes/font_size = 30
+text = "4. 게임 종료"
+
+[node name="용사" type="Sprite2D" parent="."]
+position = Vector2(269, 549)
+scale = Vector2(0.447266, 0.447266)
+texture = ExtResource("3_8eag3")

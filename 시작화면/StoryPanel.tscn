@@ -1,0 +1,692 @@
+[gd_scene load_steps=17 format=3 uid="uid://bf4aj2ggupfos"]
+
+[ext_resource type="Texture2D" uid="uid://dwx4disuvoavq" path="res://에셋/배경/스토리패널/1.png" id="1_25jpj"]
+[ext_resource type="Script" uid="uid://c62glh1lgneau" path="res://스크립트/story_panel.gd" id="1_svw8d"]
+[ext_resource type="Texture2D" uid="uid://bxm7l45rck8or" path="res://에셋/배경/스토리패널/글상자.png" id="2_7logd"]
+[ext_resource type="Texture2D" uid="uid://ijrdrodac305" path="res://에셋/배경/스토리패널/2.png" id="2_at47n"]
+[ext_resource type="Texture2D" uid="uid://ntx334x4ovl6" path="res://에셋/배경/스토리패널/3.png" id="3_at47n"]
+[ext_resource type="FontFile" uid="uid://cfyd7jhx885x8" path="res://에셋/폰트/DOSGothic.ttf" id="3_p07bm"]
+[ext_resource type="Texture2D" uid="uid://i4khuy540185" path="res://에셋/배경/스토리패널/4.png" id="6_02btp"]
+[ext_resource type="Texture2D" uid="uid://nlryckkbpqmt" path="res://에셋/배경/스토리패널/5.png" id="7_weqvy"]
+[ext_resource type="Texture2D" uid="uid://dwpli5tqnyu0n" path="res://에셋/배경/스토리패널/6.png" id="8_m16c8"]
+[ext_resource type="PackedScene" uid="uid://bqjrcv8cvyxan" path="res://배경화면/배경화면.tscn" id="9_m16c8"]
+[ext_resource type="PackedScene" uid="uid://74gg8nboq4lp" path="res://배경화면/Background.tscn" id="10_svw8d"]
+
+[sub_resource type="Animation" id="Animation_25jpj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("1번 텍스트:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("2번 텍스트:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("3:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("3번 텍스트:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("4:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("4번 텍스트:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("5:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("5번 텍스트:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("6:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("6번 텍스트:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = false
+tracks/12/path = NodePath("NameInput:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = false
+tracks/13/path = NodePath("ConfirmButton:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Background:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("NameQuestion:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_uvc4t"]
+resource_name = "story"
+length = 56.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 7, 16),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("1번 텍스트:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(4, 5, 11, 12),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(8, 13, 16, 24),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("2번 텍스트:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(12, 13, 19, 20),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("3:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(16, 22, 24, 32),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("3번 텍스트:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(20, 21, 27, 28),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("4:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 24, 30, 32, 40),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("4번 텍스트:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(28, 29, 35, 36),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("5:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(32, 38, 40, 48),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("5번 텍스트:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(36, 37, 41, 43, 44),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("6:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(40, 46, 48, 56),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("6번 텍스트:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(44, 48, 56),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("NameInput:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 56),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("ConfirmButton:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 56),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Background:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(53, 56),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("NameQuestion:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 56),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7logd"]
+_data = {
+&"RESET": SubResource("Animation_25jpj"),
+&"story": SubResource("Animation_uvc4t")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_63l1t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_svw8d"]
+
+[node name="StoryPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_svw8d")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_7logd")
+}
+
+[node name="1" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(640, 360)
+scale = Vector2(0.833333, 0.703125)
+texture = ExtResource("1_25jpj")
+
+[node name="1번 텍스트" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 39.1666
+offset_top = 540.0
+offset_right = 79.1666
+offset_bottom = 580.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="1번 텍스트"]
+modulate = Color(1, 1, 1, 0.6)
+layout_mode = 0
+offset_left = 120.0
+offset_right = 1080.0
+offset_bottom = 130.0
+texture = ExtResource("2_7logd")
+
+[node name="Label" type="Label" parent="1번 텍스트/NinePatchRect"]
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 130.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_p07bm")
+theme_override_font_sizes/font_size = 30
+text = "옛날 옛적, 어느 평화로운 마을이 있었습니다. 사람들은 언제나
+평화롭고 풍요로운 생활을 하였고, 그들의 입에는 웃음이 끊이지 
+않았습니다."
+
+[node name="2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(640, 360)
+scale = Vector2(0.833333, 0.703125)
+texture = ExtResource("2_at47n")
+
+[node name="2번 텍스트" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 39.1666
+offset_top = 540.0
+offset_right = 79.1666
+offset_bottom = 580.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="2번 텍스트"]
+modulate = Color(1, 1, 1, 0.6)
+layout_mode = 0
+offset_left = 120.0
+offset_right = 1080.0
+offset_bottom = 130.0
+texture = ExtResource("2_7logd")
+
+[node name="Label" type="Label" parent="2번 텍스트/NinePatchRect"]
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 130.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_p07bm")
+theme_override_font_sizes/font_size = 30
+text = "그러던 어느날, 골드 드래곤이 마을을 침략하였습니다. 드래곤은 
+입에서 화염을 내뿜어 마을을 불태웠고, 사람들은 비명을 지르며
+도망갔습니다."
+
+[node name="3" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(640, 360)
+scale = Vector2(0.833333, 0.703125)
+texture = ExtResource("3_at47n")
+
+[node name="3번 텍스트" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 39.1666
+offset_top = 540.0
+offset_right = 79.1666
+offset_bottom = 580.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="3번 텍스트"]
+modulate = Color(1, 1, 1, 0.6)
+layout_mode = 0
+offset_left = 120.0
+offset_right = 1080.0
+offset_bottom = 130.0
+texture = ExtResource("2_7logd")
+
+[node name="Label" type="Label" parent="3번 텍스트/NinePatchRect"]
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 130.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_p07bm")
+theme_override_font_sizes/font_size = 30
+text = "드래곤의 부하들은 마을을 약탈하고 저항하는 자들을 모조리
+죽여버렸습니다."
+
+[node name="4" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(640, 360)
+scale = Vector2(0.833333, 0.703125)
+texture = ExtResource("6_02btp")
+
+[node name="4번 텍스트" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 39.1666
+offset_top = 540.0
+offset_right = 79.1666
+offset_bottom = 580.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="4번 텍스트"]
+modulate = Color(1, 1, 1, 0.6)
+layout_mode = 0
+offset_left = 120.0
+offset_right = 1080.0
+offset_bottom = 130.0
+texture = ExtResource("2_7logd")
+
+[node name="Label" type="Label" parent="4번 텍스트/NinePatchRect"]
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 130.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_p07bm")
+theme_override_font_sizes/font_size = 30
+text = "드래곤은 마을의 거대한 탑을 점령하였고 꼭대기층에 공주를 가두고
+공주를 미끼로 탑으로 공주를 구하려는 용사들을 불러들였습니다."
+
+[node name="5" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(640, 360)
+scale = Vector2(0.833333, 0.703125)
+texture = ExtResource("7_weqvy")
+
+[node name="5번 텍스트" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 8.0
+offset_top = 516.0
+offset_right = 48.0
+offset_bottom = 556.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="5번 텍스트"]
+modulate = Color(1, 1, 1, 0.6)
+layout_mode = 0
+offset_left = 151.0
+offset_top = 24.0
+offset_right = 1111.0
+offset_bottom = 154.0
+texture = ExtResource("2_7logd")
+
+[node name="Label" type="Label" parent="5번 텍스트/NinePatchRect"]
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 130.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_p07bm")
+theme_override_font_sizes/font_size = 30
+text = "공주를 구하기 위해 탑으로 향한 수많은 용사들은 탑에 잠복해 있던
+드래곤의 병사들에게 잔인하게 목숨을 잃었습니다. 날이 갈수록
+죽어가는 용사들이 많아지자 점점 마을을 되찾을 희망을 포기하는 
+사람들이 많아졌습니다."
+
+[node name="6" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(640, 360)
+scale = Vector2(0.833333, 0.703125)
+texture = ExtResource("8_m16c8")
+
+[node name="6번 텍스트" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 39.1666
+offset_top = 540.0
+offset_right = 79.1666
+offset_bottom = 580.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="6번 텍스트"]
+modulate = Color(1, 1, 1, 0.6)
+layout_mode = 0
+offset_left = 120.0
+offset_right = 1080.0
+offset_bottom = 130.0
+texture = ExtResource("2_7logd")
+
+[node name="Label" type="Label" parent="6번 텍스트/NinePatchRect"]
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 130.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_p07bm")
+theme_override_font_sizes/font_size = 30
+text = "이때, 수많은 용사 중 하나일 뿐인 당신이 탑에 도착하였습니다..."
+
+[node name="Background" parent="." instance=ExtResource("9_m16c8")]
+modulate = Color(1, 1, 1, 0)
+
+[node name="Background2" parent="Background" instance=ExtResource("10_svw8d")]
+
+[node name="NameQuestion" type="NinePatchRect" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.6)
+layout_mode = 0
+offset_left = 159.167
+offset_top = 540.0
+offset_right = 1119.17
+offset_bottom = 670.0
+texture = ExtResource("2_7logd")
+
+[node name="Label" type="Label" parent="NameQuestion"]
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 130.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_p07bm")
+theme_override_font_sizes/font_size = 30
+text = "30층 던전 탐험 게임에 오신 것을 환영합니다!
+플레이어 이름을 입력하세요:"
+
+[node name="NameInput" type="LineEdit" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 571.0
+offset_top = 570.0
+offset_right = 1119.0
+offset_bottom = 609.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("3_p07bm")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_63l1t")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_svw8d")
+
+[node name="ConfirmButton" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 1023.0
+offset_top = 626.0
+offset_right = 1091.0
+offset_bottom = 665.0
+theme_override_fonts/font = ExtResource("3_p07bm")
+theme_override_font_sizes/font_size = 30
+text = "확인"
+
+[connection signal="pressed" from="ConfirmButton" to="." method="_on_confirm_button_pressed"]
