@@ -637,7 +637,7 @@ theme_override_font_sizes/font_size = 30
 text = "이때, 수많은 용사 중 하나일 뿐인 당신이 탑에 도착하였습니다..."
 
 [node name="Background" parent="." instance=ExtResource("9_m16c8")]
-modulate = Color(1, 1, 1, 0)
+modulate = Color(0, 0, 0, 1)
 
 [node name="Background2" parent="Background" instance=ExtResource("10_svw8d")]
 

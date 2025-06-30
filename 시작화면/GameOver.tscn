@@ -1,0 +1,109 @@
+[gd_scene load_steps=9 format=3 uid="uid://do0xayi6bpf3q"]
+
+[ext_resource type="Script" uid="uid://gaabpvwiea5h" path="res://시작화면/game_over.gd" id="1_hngu0"]
+[ext_resource type="FontFile" uid="uid://cfyd7jhx885x8" path="res://에셋/폰트/DOSGothic.ttf" id="2_3hxaa"]
+[ext_resource type="Texture2D" uid="uid://snhfvjer0cjc" path="res://에셋/배경/스토리패널/게임오버.png" id="2_rdibw"]
+[ext_resource type="FontFile" uid="uid://d0m6w61eye8j" path="res://에셋/폰트/Sam3KRFont.ttf" id="3_rdrv5"]
+
+[sub_resource type="Animation" id="Animation_rdrv5"]
+resource_name = "GameOver"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("게임오버:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ge4x4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("게임오버:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7i063"]
+_data = {
+&"GameOver": SubResource("Animation_rdrv5"),
+&"RESET": SubResource("Animation_ge4x4")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_rdrv5"]
+font = ExtResource("3_rdrv5")
+font_size = 80
+font_color = Color(0.309804, 0.00392157, 0.0156863, 1)
+outline_size = 6
+outline_color = Color(0.0142752, 0.0142752, 0.0142752, 1)
+shadow_size = 5
+shadow_offset = Vector2(3, 1)
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_hngu0")
+
+[node name="GameOver_Scene" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GameOver_Scene"]
+libraries = {
+&"": SubResource("AnimationLibrary_7i063")
+}
+
+[node name="게임오버" type="Sprite2D" parent="GameOver_Scene"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(640, 360)
+scale = Vector2(0.833333, 0.703125)
+texture = ExtResource("2_rdibw")
+
+[node name="GameOverLabel" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 482.5
+offset_top = 181.0
+offset_right = 797.5
+offset_bottom = 248.0
+theme_override_fonts/font = ExtResource("3_rdrv5")
+text = "Game Over"
+label_settings = SubResource("LabelSettings_rdrv5")
+
+[node name="RetryBtn" type="Button" parent="."]
+visible = false
+layout_mode = 2
+offset_left = 591.0
+offset_top = 403.0
+offset_right = 734.0
+offset_bottom = 443.0
+theme_override_fonts/font = ExtResource("2_3hxaa")
+theme_override_font_sizes/font_size = 30
+text = "다시 시작"
+
+[node name="QuitBtn" type="Button" parent="."]
+visible = false
+layout_mode = 2
+offset_left = 590.0
+offset_top = 483.0
+offset_right = 733.0
+offset_bottom = 523.0
+theme_override_fonts/font = ExtResource("2_3hxaa")
+theme_override_font_sizes/font_size = 30
+text = "게임 종료"
+
+[connection signal="pressed" from="RetryBtn" to="." method="_on_retry_btn_pressed"]
+[connection signal="pressed" from="QuitBtn" to="." method="_on_quit_btn_pressed"]

@@ -8,31 +8,30 @@ func _ready():
     update_status()
 
 func update_status():
-    var pd = Global.player_data
+    var gs = GameState
     status_label.text = """===== 플레이어 상태 =====
 이름: %s
 레벨: %d
 경험치: %d / %d
 체력: %d / %d
+공격력 : %d
 무기: %s
 방어구: %s
 처치한 몬스터 수: %d
 =========================""" % [
-        pd.name,
-        pd.level,
-        pd.experience,
-        pd.max_experience,
-        pd.hp,
-        pd.max_hp,
-        pd.weapon,
-        pd.armor,
-        pd.monster_kills
+        gs.player_name,
+        gs.player_lv,
+        gs.player_exp,
+        gs.next_exp,
+        gs.player_hp,
+        gs.player_maxhp,
+        gs.player_atk,
+        gs.weapon,
+        gs.armor,
+        gs.monster_kills
     ]
 
 func _on_back_pressed():
-    # DungeonMenu 찾아서 다시 보이게
-    var dungeon_menu = get_tree().root.find_child("DungeonMenu", true, false)
-    dungeon_menu.visible = true
-
-    # StatusMenu는 숨기기
+    var d_menu = get_tree().root.find_child("DungeonMenu", true, false)
+    d_menu.visible = true
     self.visible = false

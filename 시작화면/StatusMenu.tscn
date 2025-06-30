@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://b5nmw6pvuwawx"]
+[gd_scene load_steps=2 format=3 uid="uid://b5nmw6pvuwawx"]
 
 [ext_resource type="Script" uid="uid://c8hian0xu0brk" path="res://시작화면/status_menu.gd" id="1_v7lt5"]
-[ext_resource type="FontFile" uid="uid://cfyd7jhx885x8" path="res://에셋/폰트/DOSGothic.ttf" id="2_spwak"]
 
 [node name="StatusMenu" type="Control"]
 layout_mode = 3
@@ -11,22 +10,3 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_v7lt5")
-
-[node name="status_label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 740.0
-offset_top = 226.0
-offset_right = 1010.0
-offset_bottom = 606.0
-theme_override_fonts/font = ExtResource("2_spwak")
-theme_override_font_sizes/font_size = 30
-
-[node name="back_button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 854.0
-offset_top = 547.0
-offset_right = 982.0
-offset_bottom = 586.0
-theme_override_fonts/font = ExtResource("2_spwak")
-theme_override_font_sizes/font_size = 30
-text = "돌아가기"

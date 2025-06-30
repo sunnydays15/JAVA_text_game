@@ -14,8 +14,8 @@ var char_index = 0
 
 func _ready():
     sentences = [
-        "===== 30층 던전 탐험 게임을 시작합니다 =====",
-        Global.player_data.name + "님, 던전 탐험을 시작합니다.",
+        "====== 30층 던전 탐험 게임에 오신 것을 환영합니다! ======",
+        GameState.player_name + "님, 던전 탐험을 시작합니다.",
         "30층 보스를 물리치면 게임 클리어입니다."
     ]
     

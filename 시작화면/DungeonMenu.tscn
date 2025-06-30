@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://camv42qg1r0e7"]
+[gd_scene load_steps=10 format=3 uid="uid://camv42qg1r0e7"]
 
 [ext_resource type="Script" uid="uid://dh4mhhgmwi2vy" path="res://시작화면/dungeon_menu.gd" id="1_gxwt3"]
 [ext_resource type="PackedScene" uid="uid://bqjrcv8cvyxan" path="res://배경화면/배경화면.tscn" id="2_6w8gu"]
 [ext_resource type="Texture2D" uid="uid://ch8erfcf654sy" path="res://에셋/주인공/용사.PNG" id="3_8eag3"]
 [ext_resource type="FontFile" uid="uid://cfyd7jhx885x8" path="res://에셋/폰트/DOSGothic.ttf" id="3_14oeu"]
+[ext_resource type="PackedScene" uid="uid://b5nmw6pvuwawx" path="res://시작화면/StatusMenu.tscn" id="5_yhvov"]
+[ext_resource type="Script" uid="uid://pn0trbecovy4" path="res://시작화면/inventory_menu.gd" id="6_6ejjq"]
+[ext_resource type="Texture2D" uid="uid://m6uyrqtag33c" path="res://에셋/아이템/하트물약.png" id="7_xq5s0"]
+[ext_resource type="Texture2D" uid="uid://dtiuaylptw4o3" path="res://에셋/아이템/경험치물약.png" id="8_b2g7t"]
+[ext_resource type="Texture2D" uid="uid://b08chupyr5ira" path="res://에셋/아이템/스페셜물약.png" id="9_a664e"]
 
 [node name="DungeonMenu" type="Control"]
 layout_mode = 3
@@ -61,3 +66,137 @@ text = "4. 게임 종료"
 position = Vector2(269, 549)
 scale = Vector2(0.447266, 0.447266)
 texture = ExtResource("3_8eag3")
+
+[node name="StatusMenu" parent="." instance=ExtResource("5_yhvov")]
+visible = false
+layout_mode = 1
+
+[node name="status_label" type="Label" parent="StatusMenu"]
+layout_mode = 0
+offset_left = 740.0
+offset_top = 226.0
+offset_right = 1010.0
+offset_bottom = 606.0
+theme_override_fonts/font = ExtResource("3_14oeu")
+theme_override_font_sizes/font_size = 30
+
+[node name="back_button" type="Button" parent="StatusMenu"]
+layout_mode = 0
+offset_left = 854.0
+offset_top = 577.0
+offset_right = 982.0
+offset_bottom = 616.0
+theme_override_fonts/font = ExtResource("3_14oeu")
+theme_override_font_sizes/font_size = 30
+text = "돌아가기"
+
+[node name="InventoryMenu" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_6ejjq")
+
+[node name="하트물약" type="Sprite2D" parent="InventoryMenu"]
+position = Vector2(283, 350)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_xq5s0")
+
+[node name="경험치물약" type="Sprite2D" parent="InventoryMenu"]
+position = Vector2(616, 350)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_b2g7t")
+
+[node name="스페셜물약" type="Sprite2D" parent="InventoryMenu"]
+position = Vector2(949, 350)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_a664e")
+
+[node name="HeartPotionLabel" type="Label" parent="InventoryMenu"]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 460.0
+offset_right = 223.0
+offset_bottom = 491.0
+theme_override_fonts/font = ExtResource("3_14oeu")
+theme_override_font_sizes/font_size = 30
+
+[node name="HeartUseButton" type="Button" parent="InventoryMenu"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 515.0
+offset_right = 316.0
+offset_bottom = 554.0
+theme_override_fonts/font = ExtResource("3_14oeu")
+theme_override_font_sizes/font_size = 30
+text = "사용"
+
+[node name="ExpPotionLabel" type="Label" parent="InventoryMenu"]
+layout_mode = 0
+offset_left = 516.0
+offset_top = 460.0
+offset_right = 556.0
+offset_bottom = 491.0
+theme_override_fonts/font = ExtResource("3_14oeu")
+theme_override_font_sizes/font_size = 30
+
+[node name="ExpUseButton" type="Button" parent="InventoryMenu"]
+layout_mode = 0
+offset_left = 581.0
+offset_top = 515.0
+offset_right = 649.0
+offset_bottom = 554.0
+theme_override_fonts/font = ExtResource("3_14oeu")
+theme_override_font_sizes/font_size = 30
+text = "사용"
+
+[node name="SpecialPotionLabel" type="Label" parent="InventoryMenu"]
+layout_mode = 0
+offset_left = 849.0
+offset_top = 460.0
+offset_right = 889.0
+offset_bottom = 491.0
+theme_override_fonts/font = ExtResource("3_14oeu")
+theme_override_font_sizes/font_size = 30
+
+[node name="SpecialUseButton" type="Button" parent="InventoryMenu"]
+layout_mode = 0
+offset_left = 914.0
+offset_top = 515.0
+offset_right = 922.0
+offset_bottom = 523.0
+theme_override_fonts/font = ExtResource("3_14oeu")
+theme_override_font_sizes/font_size = 30
+text = "사용"
+
+[node name="CloseButton" type="Button" parent="InventoryMenu"]
+layout_mode = 0
+offset_left = 1071.0
+offset_top = 606.0
+offset_right = 1199.0
+offset_bottom = 645.0
+theme_override_fonts/font = ExtResource("3_14oeu")
+theme_override_font_sizes/font_size = 30
+text = "돌아가기"
+
+[node name="ToastLabel" type="Label" parent="InventoryMenu"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 582.0
+offset_top = 644.0
+offset_right = 622.0
+offset_bottom = 675.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_14oeu")
+theme_override_font_sizes/font_size = 30
+
+[connection signal="pressed" from="menu_container/explore_button" to="." method="_on_explore_button_pressed"]
+[connection signal="pressed" from="menu_container/status_button" to="." method="_on_status_button_pressed"]
+[connection signal="pressed" from="menu_container/inventory_button" to="." method="_on_inventory_button_pressed"]
+[connection signal="pressed" from="menu_container/exit_button" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="StatusMenu/back_button" to="." method="_on_back_button_pressed"]

@@ -1,0 +1,198 @@
+[gd_scene load_steps=12 format=3 uid="uid://12fs4hlnf2yd"]
+
+[ext_resource type="Script" uid="uid://bq5ixohlumlk" path="res://시작화면/battle.gd" id="1_suquq"]
+[ext_resource type="PackedScene" uid="uid://bqjrcv8cvyxan" path="res://배경화면/배경화면.tscn" id="2_pujb6"]
+[ext_resource type="PackedScene" uid="uid://74gg8nboq4lp" path="res://배경화면/Background.tscn" id="3_a2dfu"]
+[ext_resource type="Texture2D" uid="uid://ch8erfcf654sy" path="res://에셋/주인공/용사.PNG" id="4_a2dfu"]
+[ext_resource type="Texture2D" uid="uid://bxm7l45rck8or" path="res://에셋/배경/스토리패널/글상자.png" id="5_e48s0"]
+[ext_resource type="Script" uid="uid://b8kjuklfru77e" path="res://시작화면/encounter_panel.gd" id="6_e48s0"]
+[ext_resource type="FontFile" uid="uid://cfyd7jhx885x8" path="res://에셋/폰트/DOSGothic.ttf" id="7_uaxs5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e48s0"]
+bg_color = Color(0.2, 0.2, 0.2, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.277528, 0.277528, 0.277528, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_80b3o"]
+bg_color = Color(0.492674, 0.11861, 0.084807, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.278431, 0.278431, 0.278431, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uaxs5"]
+bg_color = Color(0.2, 0.2, 0.2, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.278431, 0.278431, 0.278431, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qag3r"]
+bg_color = Color(0.494118, 0.117647, 0.0862745, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.278431, 0.278431, 0.278431, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Battle" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_suquq")
+
+[node name="Background" parent="." instance=ExtResource("2_pujb6")]
+
+[node name="Background2" parent="Background" instance=ExtResource("3_a2dfu")]
+
+[node name="용사" type="Sprite2D" parent="."]
+position = Vector2(269, 549)
+scale = Vector2(0.447266, 0.447266)
+texture = ExtResource("4_a2dfu")
+
+[node name="EncounterPanel" type="NinePatchRect" parent="."]
+modulate = Color(1, 1, 1, 0.6)
+layout_mode = 0
+offset_left = 172.0
+offset_top = 538.0
+offset_right = 1132.0
+offset_bottom = 668.0
+texture = ExtResource("5_e48s0")
+script = ExtResource("6_e48s0")
+
+[node name="encounter_label" type="Label" parent="EncounterPanel"]
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 130.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("7_uaxs5")
+theme_override_font_sizes/font_size = 30
+
+[node name="MonsterSprite" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -526.0
+offset_top = -90.0
+offset_right = -163.0
+offset_bottom = 295.0
+grow_horizontal = 0
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MonsterHPBar" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6
+anchor_top = 0.15
+anchor_right = 0.95
+anchor_bottom = 0.2
+offset_left = 57.0
+offset_top = 148.0
+offset_right = -169.0
+offset_bottom = 148.0
+theme_override_styles/background = SubResource("StyleBoxFlat_e48s0")
+theme_override_styles/fill = SubResource("StyleBoxFlat_80b3o")
+show_percentage = false
+
+[node name="PlayerHPBar" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6
+anchor_top = 0.15
+anchor_right = 0.95
+anchor_bottom = 0.2
+offset_left = -615.0
+offset_top = 181.0
+offset_right = -841.0
+offset_bottom = 181.0
+theme_override_styles/background = SubResource("StyleBoxFlat_uaxs5")
+theme_override_styles/fill = SubResource("StyleBoxFlat_qag3r")
+show_percentage = false
+
+[node name="MonsterName" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 274.0
+offset_top = 220.0
+offset_right = 314.0
+offset_bottom = 251.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("7_uaxs5")
+theme_override_font_sizes/font_size = 30
+
+[node name="ButtonPanel" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.85
+anchor_right = 0.75
+anchor_bottom = 0.95
+offset_left = 359.0
+offset_top = -74.0
+offset_right = 73.0
+offset_bottom = -16.0
+
+[node name="AttackBtn" type="Button" parent="ButtonPanel"]
+custom_minimum_size = Vector2(130, 40)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_uaxs5")
+theme_override_font_sizes/font_size = 30
+text = "1. 전투한다"
+
+[node name="FleeBtn" type="Button" parent="ButtonPanel"]
+custom_minimum_size = Vector2(130, 40)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_uaxs5")
+theme_override_font_sizes/font_size = 20
+text = "2. 도망간다
+(30% 확률로 성공)"
+
+[node name="ToastLabel" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 10.0
+offset_right = 20.0
+offset_bottom = 41.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("7_uaxs5")
+theme_override_font_sizes/font_size = 30
+
+[connection signal="pressed" from="ButtonPanel/AttackBtn" to="." method="_on_attack_btn_pressed"]
+[connection signal="pressed" from="ButtonPanel/FleeBtn" to="." method="_on_flee_btn_pressed"]
